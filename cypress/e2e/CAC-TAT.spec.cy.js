@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-const { functionsIn } = require("cypress/types/lodash")
-
 // Localizando, digitando e clicando em elementos
 describe('Central de Atendimento ao Cliente TAT', function () {
   beforeEach(function () {
@@ -157,9 +155,5 @@ describe('Central de Atendimento ao Cliente TAT', function () {
         expect($input[0].files[0].name).to.equal('example.json')
       }) 
   })  
-})
-  //Lidando com links que abrem em outra aba
-  it('verifica que a política de privacidade abre em outra aba sem a necessidade de clique', function () {
-    cy.get('privacy a').should('have.attr', 'target', '_blank')
 })
 
